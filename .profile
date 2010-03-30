@@ -1,5 +1,5 @@
 TERM=linux
-export LANG=zh_TW.UTF-8
+export LANG=en_US.UTF-8
 
 # ref: http://tldp.org/LDP/abs/html/sample-bashrc.html
 
@@ -152,10 +152,10 @@ alias mysqlstop='mysqladmin5 -u root -p shutdown'
 #alias more='less'
 export PAGER=less
 #export LESSCHARSET='latin1'
-export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-'
+#export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-'
    # Use this if lesspipe.sh exists
-export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
-:stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
+#export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
+#:stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
 
 
 export GREP_OPTIONS='--color=always'

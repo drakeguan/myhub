@@ -11,6 +11,7 @@ set showcmd
 set wildmenu
 set ruler
 set modeline
+set autoread
 "set nowrap
 set autoindent
 set hlsearch

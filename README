@@ -1,1 +1,8 @@
-This is my personal dot files for my working environment (currently in Digimax Inc.) and my MacBook Pro.
+This is my personal dot files for my working environment and my MacBook Pro.
+In order to "see" those dot files which are supposed to be hidden files,
+"dot" has been replaced by "underline". That is, you have to use symbolic
+links with "dot" prefixed filenames.
+
+http://drakeguan.org/
+Shuen-Huei (Drake) Guan.
+

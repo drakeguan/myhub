@@ -12,14 +12,6 @@ export HISTCONTROL=ignoredups
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# enable color support of ls and also add handy aliases
-if [ "$TERM" != "dumb" ]; then
-    eval "`dircolors -b`"
-    alias ls='ls --color=auto'
-    alias dir='ls --color=auto --format=vertical'
-    alias vdir='ls --color=auto --format=long'
-fi
-
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
 
@@ -94,6 +86,8 @@ function sq() { cd `dgchdir.py --sq $1` ; }
 function sc() { cd `dgchdir.py --sc $1` ; }
 function dept() { cd `dgchdir.py --dept $1` ; }
 ########################################################
+
+function mkcd() { mkdir -p $@; cd $@; }
 
 #export PYTHONPATH="/usr/local/lib/python2.5/site-packages/:${PYTHONPATH}"
 

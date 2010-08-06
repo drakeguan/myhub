@@ -1,5 +1,6 @@
 snippet #!
 	#!/usr/bin/env python
+	# -*- coding: utf-8 -*-
 
 snippet imp
 	import ${1:module}
@@ -79,8 +80,11 @@ snippet try Try/Except/Else/Finally
 		${6:pass}
 # if __name__ == '__main__':
 snippet ifmain
+	def ${1:main}(argv=sys.argv[:]):
+		pass
+
 	if __name__ == '__main__':
-		${1:main()}
+		sys.exit($1())
 # __magic__
 snippet _
 	__${1:init}__${2}

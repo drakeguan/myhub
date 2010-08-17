@@ -168,9 +168,9 @@ autocmd BufRead *.slim set list listchars=tab:»-
 autocmd BufRead *.as set filetype=actionscript
 
 "" taglist
-"nnoremap <silent> <F8> :TlistToggle<CR>
-"let Tlist_Exit_OnlyWindow = 1
-"let Tlist_GainFocus_On_ToggleOpen = 1
+nnoremap <silent> <F8> :TlistToggle<CR>
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
 
 " python_fn
 "map  ]k    :call PythonNextLine(-1)<CR>

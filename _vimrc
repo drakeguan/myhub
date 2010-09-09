@@ -6,19 +6,19 @@ source $VIMRUNTIME/autoload/syntaxcomplete.vim
 set t_Co=256
 colorscheme wombat256
 
-set showmode
-set showcmd
-set wildmenu
-set ruler
-set modeline
-set autoread
-"set nowrap
 set autoindent
+set autoread
 set hlsearch
 set incsearch
-set showmatch
 set ignorecase
+set modeline
+"set nowrap
+set ruler
+set showmode
+set showcmd
+set showmatch
 set smartcase
+set wildmenu
 
 " mouse
 set mouse=a
@@ -35,7 +35,7 @@ endif
 set cpo&vim
 
 " set 'selection', 'selectmode', 'mousemodel' and 'keymodel' for MS-Windows
-behave mswin
+"behave mswin
 
 " backspace and cursor keys wrap to previous/next line
 set backspace=indent,eol,start whichwrap+=<,>,[,]
@@ -100,9 +100,9 @@ if has("gui")
 endif
 
 " CTRL-A is Select all
-noremap <C-A> gggH<C-O>G
-inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-cnoremap <C-A> <C-C>gggH<C-O>G
+"noremap <C-A> gggH<C-O>G
+"inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+"cnoremap <C-A> <C-C>gggH<C-O>G
 
 " CTRL-Tab is Next window
 noremap <C-Tab> :tabn<CR>
@@ -182,7 +182,7 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 "map <silent><C-Left> <C-T>
 "map <silent><C-Right> <C-]>
 
-map <F5> :!make all<cr>
+"map <F5> :!make all<cr>
 
 
 

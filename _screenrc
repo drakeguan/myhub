@@ -1,26 +1,12 @@
-# $Id: screenrc,v 1.15 2003/10/08 11:39:03 zal Exp $ #
-# /etc/screenrc
-#
-#   This is the system wide screenrc.
-#
-#   You can use this file to change the default behavior of screen system wide
-#   or copy it to ~/.screenrc and use it as a starting point for your own
-#   settings.
-#
-#   Commands in this file are used to set options, bind screen functions to
-#   keys, redefine terminal capabilities, and to automatically establish one or
-#   more windows at the beginning of your screen session.
-#
-#   This is not a comprehensive list of options, look at the screen manual for
-#   details on everything that you can put in this file.
-#
-
-# ------------------------------------------------------------------------------
-# SCREEN SETTINGS
-# ------------------------------------------------------------------------------
-
+# Start message
 startup_message off
 #nethack on
+
+# Set default encoding using utf8
+defutf8 on
+
+# Dynamic title
+shelltitle '$ |bash'
 
 #defflow on # will force screen to process ^S/^Q
 deflogin on

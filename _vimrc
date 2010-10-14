@@ -155,7 +155,8 @@ set softtabstop=4
 let python_highlight_all=1
 
 " smartindent for python
-autocmd BufRead *.py set nu et smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+"autocmd BufRead *.py set nu et smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd BufRead *.py set nu et cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 " highligh tabs for python
 " ref: http://vim.wikia.com/wiki/Highlight_unwanted_spaces

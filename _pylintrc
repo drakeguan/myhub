@@ -57,13 +57,21 @@ load-plugins=
 #
 # W0141:	Used builtin function %r
 #Used when a black listed builtin function is used (see the bad-function option). Usual black listed functions are the ones like map, or filter , where Python offers now some cleaner alternative like list comprehension.
-
+#
 # W0142:	Used * or * magic*
 #Used when a function or method is called using *args or **kwargs to dispatch arguments. This doesn't improve readility and should be used with care.
 #
 # W0702:	No exception's type specified
 #Used when an except clause doesn't specify exceptions type to catch.
-disable-msg=W0142,W0702
+#
+# W0614: *Unused import %s from wildcard import*
+#  Used when an imported module or variable is not used from a 'from X import *'
+#  style import. This message belongs to the variables checker.
+#
+# W0613: *Unused argument %r*
+#  Used when a function or method argument is not used. This message belongs to the variables checker.
+#
+disable-msg=W0142,W0702,W0614,W0613
 
 
 [REPORTS]
@@ -73,7 +81,7 @@ disable-msg=W0142,W0702
 output-format=text
 
 # Include message's id in output
-include-ids=no
+include-ids=yes
 
 # Put messages in a separate file for each module / package specified on the
 # command line instead of printing them on stdout. Reports (if any) will be

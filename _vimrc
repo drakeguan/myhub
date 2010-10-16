@@ -6,19 +6,19 @@ source $VIMRUNTIME/autoload/syntaxcomplete.vim
 set t_Co=256
 colorscheme wombat256
 
-set showmode
-set showcmd
-set wildmenu
-set ruler
-set modeline
-set autoread
-"set nowrap
 set autoindent
+set autoread
 set hlsearch
 set incsearch
-set showmatch
 set ignorecase
+set modeline
+"set nowrap
+set ruler
+set showmode
+set showcmd
+set showmatch
 set smartcase
+set wildmenu
 
 " mouse
 set mouse=a
@@ -35,7 +35,7 @@ endif
 set cpo&vim
 
 " set 'selection', 'selectmode', 'mousemodel' and 'keymodel' for MS-Windows
-behave mswin
+"behave mswin
 
 " backspace and cursor keys wrap to previous/next line
 set backspace=indent,eol,start whichwrap+=<,>,[,]
@@ -44,18 +44,18 @@ set backspace=indent,eol,start whichwrap+=<,>,[,]
 vnoremap <BS> d
 
 " CTRL-X and SHIFT-Del are Cut
-vnoremap <C-X> "+x
+"vnoremap <C-X> "+x
 "vnoremap <S-Del> "+x
 
 " CTRL-C and CTRL-Insert are Copy
-vnoremap <C-C> "+y
+"vnoremap <C-C> "+y
 "vnoremap <C-Insert> "+y
 
 " CTRL-V and SHIFT-Insert are Paste
-map <C-V>		"+gP
+"map <C-V>		"+gP
 "map <S-Insert>		"+gP
 
-cmap <C-V>		<C-R>+
+"cmap <C-V>		<C-R>+
 "cmap <S-Insert>		<C-R>+
 
 " Pasting blockwise and linewise selections is not possible in Insert and
@@ -63,14 +63,14 @@ cmap <C-V>		<C-R>+
 " were characterwise instead.
 " Uses the paste.vim autoload script.
 
-exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
-exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
+"exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+"exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
 
 "imap <S-Insert>		<C-V>
 "vmap <S-Insert>		<C-V>
 
 " Use CTRL-Q to do what CTRL-V used to do
-noremap <C-Q>		<C-V>
+"noremap <C-Q>		<C-V>
 
 " Use CTRL-S for saving, also in Insert mode
 noremap <C-S>		:update<CR>
@@ -93,16 +93,16 @@ endif
 
 " Alt-Space is System menu
 if has("gui")
-  noremap <M-Space> :simalt ~<CR>
-  inoremap <M-Space> <C-O>:simalt ~<CR>
-  cnoremap <M-Space> <C-C>:simalt ~<CR>
+"  noremap <M-Space> :simalt ~<CR>
+"  inoremap <M-Space> <C-O>:simalt ~<CR>
+"  cnoremap <M-Space> <C-C>:simalt ~<CR>
   set guioptions-=T "disable toolbar
 endif
 
 " CTRL-A is Select all
-noremap <C-A> gggH<C-O>G
-inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-cnoremap <C-A> <C-C>gggH<C-O>G
+"noremap <C-A> gggH<C-O>G
+"inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+"cnoremap <C-A> <C-C>gggH<C-O>G
 
 " CTRL-Tab is Next window
 noremap <C-Tab> :tabn<CR>
@@ -155,7 +155,8 @@ set softtabstop=4
 let python_highlight_all=1
 
 " smartindent for python
-autocmd BufRead *.py set nu et smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+"autocmd BufRead *.py set nu et smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd BufRead *.py set nu et cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 " highligh tabs for python
 " ref: http://vim.wikia.com/wiki/Highlight_unwanted_spaces
@@ -182,4 +183,29 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 "map <silent><C-Left> <C-T>
 "map <silent><C-Right> <C-]>
 
-map <F5> :!make all<cr>
+"map <F5> :!make all<cr>
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-latex suite
+" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
+filetype plugin on
+
+" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
+" can be called correctly.
+"set shellslash
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse Latex-Suite. Set your grep
+" program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+
+" OPTIONAL: This enables automatic indentation as you type.
+filetype indent on
+
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'

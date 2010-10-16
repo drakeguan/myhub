@@ -1,9 +1,10 @@
 # some more ls aliases
 if [ "$TERM" != "dumb" ]; then
-    eval "`dircolors -b`"
-    alias ls='ls --color=auto'
-    alias dir='ls --color=auto --format=vertical'
-    alias vdir='ls --color=auto --format=long'
+    #eval "`dircolors -b`"
+    #alias ls='ls --color=auto'
+    alias ls='ls -G'
+    alias dir='ls --format=vertical'
+    alias vdir='ls --format=long'
 fi
 
 alias ll='ls -l'
@@ -19,14 +20,16 @@ alias ssh='ssh -X'
 
 # grep
 MACHINE=`uname -m`
-UBUNTUVERSION=`cat /etc/issue | grep Ubuntu | cut -d " " -f 2`      # 6.06.2, 7.10
-if [ $UBUNTUVERSION == "7.10" ]; then
-    alias grep='grep --exclude="*svn*"'
-else
-    alias grep='grep --exclude-dir=".svn"'
+if [ -f /etc/issue ]; then
+    UBUNTUVERSION=`cat /etc/issue | grep Ubuntu | cut -d " " -f 2`      # 6.06.2, 7.10
+    if [ $UBUNTUVERSION == "7.10" ]; then
+	alias grep='grep --exclude="*svn*"'
+    else
+	alias grep='grep --exclude-dir=".svn"'
+    fi
+    alias cgrep='grep --color'
+    alias dgrep='grep -rIn --exclude="*svn*" --exclude="*Po" --exclude="Makefile*" '
 fi
-alias cgrep='grep --color'
-alias dgrep='grep -rIn --exclude="*svn*" --exclude="*Po" --exclude="Makefile*" '
 
 alias xine='xine -l'
 alias eric='PYTHONPATH=/usr/lib/python2.5/site-packages/:${PYTHONPATH} eric'

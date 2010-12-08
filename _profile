@@ -66,6 +66,10 @@ shopt -u mailwarn
 unset MAILCHECK         # Do not want my shell to warn me of incoming mail.
 
 
+# bash-completion
+if [ -f /opt/local/etc/bash_completion ]; then
+    . /opt/local/etc/bash_completion
+fi
 
 #-------------------------------------------------------------
 # Shell Prompt

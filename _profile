@@ -16,7 +16,7 @@ export MANPATH=/opt/local/share/man:$MANPATH
 export EDITOR=/usr/bin/vim
 export HISTFILESIZE=3000 # the bash history should save 3000 commands
 export HISTCONTROL=ignoredups #don't put duplicate lines in the history.
-alias hist='history | grep $1' #Requires one input
+#alias hist='history | grep $1' #Requires one input
 
 
 # Define a few Color's

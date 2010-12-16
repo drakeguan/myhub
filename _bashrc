@@ -9,8 +9,8 @@
 if [ -d /opt/local/bin ]; then
     export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 fi
-export PATH="${HOME}/bin/:${PATH}"
 # Finished adapting your PATH environment variable for use with MacPorts.
+export PATH="${HOME}/bin/:${PATH}"
 
 # MacPorts Installer addition on 2008-12-24_at_23:35:44: adding an appropriate MANPATH variable for use with MacPorts.
 if [ -d /opt/local/share/man ]; then
@@ -18,12 +18,27 @@ if [ -d /opt/local/share/man ]; then
 fi
 # Finished adapting your MANPATH environment variable for use with MacPorts.
 
+export LANG=en_US.UTF-8
+
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
+export HISTFILESIZE=3000 # the bash history should save 3000 commands
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+# Enable options:
+shopt -s cdspell
+shopt -s cdable_vars
+shopt -s checkhash
+shopt -s checkwinsize
+shopt -s sourcepath
+shopt -s no_empty_cmd_completion
+shopt -s cmdhist
+shopt -s histappend histreedit histverify
+shopt -s extglob        # Necessary for programmable completion.
+
+# Disable options:
+shopt -u mailwarn
+unset MAILCHECK         # Do not want my shell to warn me of incoming mail.
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
@@ -102,5 +117,8 @@ function dept() { cd `dgchdir.py --dept $1` ; }
 function mkcd() { mkdir -p $@; cd $@; }
 
 #export PYTHONPATH="/usr/local/lib/python2.5/site-packages/:${PYTHONPATH}"
+if [ -d /Users/drake/Documents/Code/python/lib ]; then
+    export PYTHONPATH=/Users/drake/Documents/Code/python/lib:${PYTHONPATH}
+fi
 
 #export LD_LIBRARY_PATH=/opt/pixar/RenderMan_Studio-1.0.1-Maya8.5/bin/:/shows/dgTools/bin/64bit

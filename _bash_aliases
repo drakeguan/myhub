@@ -1,8 +1,12 @@
 # some more ls aliases
 if [ "$TERM" != "dumb" ]; then
     #eval "`dircolors -b`"
-    #alias ls='ls --color=auto'
-    alias ls='ls -G'
+    OS=$(uname)
+    if [ $OS == "Darwin" ]; then
+	alias ls='ls -G'
+    else
+	alias ls='ls --color=auto'
+    fi
     alias dir='ls --format=vertical'
     alias vdir='ls --format=long'
 fi

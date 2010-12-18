@@ -1,6 +1,6 @@
-# some more ls aliases
+## some more ls aliases
 if [ "$TERM" != "dumb" ]; then
-    #eval "`dircolors -b`"
+    eval "`dircolors -b`"
     OS=$(uname)
     if [ $OS = "Darwin" ]; then
 	alias ls='ls -G'
@@ -23,10 +23,10 @@ alias cpaf='cp --no-dereference -R --preserve=mode,link'
 alias ssh='ssh -X'
 
 # grep
-MACHINE=`uname -m`
+#MACHINE=`uname -m`
 if [ -f /etc/issue ]; then
-    UBUNTUVERSION=`cat /etc/issue | grep Ubuntu | cut -d " " -f 2`      # 6.06.2, 7.10
-    if [ $UBUNTUVERSION = "7.10" ]; then
+    UBUNTUVERSION=`cat /etc/issue | grep Ubuntu | cut -d " " -f 2`
+    if [ "$UBUNTUVERSION" = "7.10" ]; then
 	alias grep='grep --exclude="*svn*"'
     else
 	alias grep='grep --exclude-dir=".svn"'

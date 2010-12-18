@@ -2,7 +2,7 @@
 if [ "$TERM" != "dumb" ]; then
     #eval "`dircolors -b`"
     OS=$(uname)
-    if [ $OS == "Darwin" ]; then
+    if [ $OS = "Darwin" ]; then
 	alias ls='ls -G'
     else
 	alias ls='ls --color=auto'
@@ -26,7 +26,7 @@ alias ssh='ssh -X'
 MACHINE=`uname -m`
 if [ -f /etc/issue ]; then
     UBUNTUVERSION=`cat /etc/issue | grep Ubuntu | cut -d " " -f 2`      # 6.06.2, 7.10
-    if [ $UBUNTUVERSION == "7.10" ]; then
+    if [ $UBUNTUVERSION = "7.10" ]; then
 	alias grep='grep --exclude="*svn*"'
     else
 	alias grep='grep --exclude-dir=".svn"'

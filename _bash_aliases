@@ -1,10 +1,10 @@
 ## some more ls aliases
 if [ "$TERM" != "dumb" ]; then
-    eval "`dircolors -b`"
     OS=$(uname)
     if [ $OS = "Darwin" ]; then
 	alias ls='ls -G'
     else
+	eval "`dircolors -b`"
 	alias ls='ls --color=auto'
     fi
     alias dir='ls --format=vertical'

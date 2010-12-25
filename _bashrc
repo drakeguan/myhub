@@ -77,7 +77,7 @@ xterm*|rxvt*)
 esac
 
 # git on drakeguan.org
-if [ -f ~/git/bin ]; then
+if [ -d ~/git/bin ]; then
     export GIT_HOME=${HOME}/git
     export PATH=${GIT_HOME}/bin:${GIT_HOME}/lib/libexec/git-core/:${PATH}
 fi

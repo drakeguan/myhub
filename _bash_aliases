@@ -45,6 +45,9 @@ alias svnmeld='svn diff --diff-cmd "/usr/bin/meld"'
 alias svndiff='svn diff -x -b'
 function svnmeld2() { svn diff --diff-cmd "/usr/bin/meld" --old=$1@$2 --new=$1@$3 ;}
 
+# couchdb
+alias jj='python -mjson.tool'
+
 # Vim 6 doesn't support "-p"!
 VIMVERSION=`vim --version 2>&1 | grep "Vi IMproved 6"`
 if [ -z "${VIMVERSION}" ]; then

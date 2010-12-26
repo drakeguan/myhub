@@ -115,7 +115,6 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
-export http_proxy='http://proxy.digimax.com.tw:8080'
 
 
 
@@ -133,3 +132,9 @@ if [ -d /Users/drake/Documents/Code/python/lib ]; then
 fi
 
 #export LD_LIBRARY_PATH=/opt/pixar/RenderMan_Studio-1.0.1-Maya8.5/bin/:/shows/dgTools/bin/64bit
+
+ping -c 2 proxy.digimax.com.tw &> /dev/null
+if [ $? = 0 ]
+then
+    export http_proxy='http://proxy.digimax.com.tw:8080'
+fi

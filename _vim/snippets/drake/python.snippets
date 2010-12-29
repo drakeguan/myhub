@@ -1,25 +1,15 @@
 snippet #!
-	#!/usr/bin/env python
-	# -*- coding: utf-8 -*-
-	#
-	# $Author$
-	# $Date$
-	# $Revision$
-	#
+	#!/usr/bin/python
 
 snippet imp
 	import ${1:module}
-# Docstring
-snippet docm
+# Module Docstring
+snippet docs
 	'''
 	File: ${1:`Filename('$1.py', 'foo.py')`}
 	Author: ${2:`g:snips_author`}
 	Description: ${3}
 	'''
-snippet doc
-	"""
-	"""
-# flow control
 snippet wh
 	while ${1:condition}:
 		${2:# code...}
@@ -59,7 +49,6 @@ snippet ld
 	${1:var} = lambda ${2:vars} : ${3:action}
 snippet .
 	self.
-# try exception
 snippet try Try/Except
 	try:
 		${1:pass}
@@ -90,34 +79,8 @@ snippet try Try/Except/Else/Finally
 		${6:pass}
 # if __name__ == '__main__':
 snippet ifmain
-	def ${1:main}(argv=sys.argv[:]):
-		pass
-
 	if __name__ == '__main__':
-		sys.exit($1())
+		${1:main()}
 # __magic__
 snippet _
 	__${1:init}__${2}
-# MetaEntity
-snippet dm
-	${1:name} = MetaEntity(
-		__name__ = '$1',
-		__bases__ = [${2:Entity}],
-	)
-
-# Field
-snippet df
-	${1:name} = Field(type=${2:EntityDict}),
-# yaml field
-snippet yaf
-	${1:name}:
-		type: ${2:unicode}
-		description: ${3:ooxx}
-# import all
-snippet impall
-	import datetime
-	import os
-	import optparse
-	import shutil
-	import sys
-	import time

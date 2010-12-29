@@ -137,4 +137,6 @@ ping -c 2 proxy.digimax.com.tw &> /dev/null
 if [ $? = 0 ]
 then
     export http_proxy='http://proxy.digimax.com.tw:8080'
+    export https_proxy='http://proxy.digimax.com.tw:8080'
+    export ftp_proxy='http://proxy.digimax.com.tw:8080'
 fi

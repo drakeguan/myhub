@@ -126,11 +126,6 @@ function dept() { cd `dgchdir.py --dept $1` ; }
 
 function mkcd() { mkdir -p $@; cd $@; }
 
-#export PYTHONPATH="/usr/local/lib/python2.5/site-packages/:${PYTHONPATH}"
-if [ -d /Users/drake/Documents/Code/python/lib ]; then
-    export PYTHONPATH=/Users/drake/Documents/Code/python/lib:${PYTHONPATH}
-fi
-
 #export LD_LIBRARY_PATH=/opt/pixar/RenderMan_Studio-1.0.1-Maya8.5/bin/:/shows/dgTools/bin/64bit
 
 ping -c 2 proxy.digimax.com.tw &> /dev/null
@@ -139,4 +134,14 @@ then
     export http_proxy='http://proxy.digimax.com.tw:8080'
     export https_proxy='http://proxy.digimax.com.tw:8080'
     export ftp_proxy='http://proxy.digimax.com.tw:8080'
+fi
+
+# local python path if available
+if [ -d ${HOME}/Documents/Code/python/lib ]; then
+    export PYTHONPATH=${HOME}/Documents/Code/python/lib:${PYTHONPATH}
+fi
+
+# local perl5 modules
+if [ -d ${HOME}/perl5/lib/perl5 ]; then
+    export PERL5LIB=${HOME}/perl5/lib/perl5;$PERL5LIB
 fi

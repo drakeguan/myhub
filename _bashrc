@@ -143,5 +143,5 @@ fi
 
 # local perl5 modules
 if [ -d ${HOME}/perl5/lib/perl5 ]; then
-    export PERL5LIB=${HOME}/perl5/lib/perl5;$PERL5LIB
+    export PERL5LIB=${HOME}/perl5/lib/perl5:$PERL5LIB
 fi

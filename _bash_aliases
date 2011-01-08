@@ -36,7 +36,7 @@ if [ -f /etc/issue ]; then
 fi
 
 alias xine='xine -l'
-alias eric='PYTHONPATH=/usr/lib/python2.5/site-packages/:${PYTHONPATH} eric'
+#alias eric='PYTHONPATH=/usr/lib/python2.5/site-packages/:${PYTHONPATH} eric'
 if [ $OS = "Darwin" ]; then
     alias ps='ps aux'
 else

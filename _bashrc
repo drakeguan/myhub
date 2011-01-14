@@ -5,6 +5,10 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# locale encoding
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # MacPorts Installer addition on 2008-12-24_at_23:35:44: adding an appropriate PATH variable for use with MacPorts.
 if [ -d /opt/local/bin ]; then
     export PATH=/opt/local/bin:/opt/local/sbin:$PATH

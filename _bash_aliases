@@ -59,4 +59,7 @@ if [ -z "${VIMVERSION}" ]; then
     alias gvim='gvim -p'
 fi
 
-
+# private alias
+if [ -f ~/.bash_aliases_private ]; then
+    . ~/.bash_aliases_private
+fi

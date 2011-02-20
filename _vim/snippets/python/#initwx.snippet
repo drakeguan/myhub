@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import wx
+import sys
+
+class MyFrame(wx.Frame):
+    """docstring for MyFrame"""
+    def __init__(self, parent, title):
+        super(MyFrame, self).__init__(parent, title=title)
+
+class MyApp(wx.App):
+    def OnInit(self):
+        self.frame = MyFrame(None, title="Simple wxPython App")
+        self.frame.Show()
+        self.SetTopWindow(self.frame)
+        return True
+
+def main(argv=sys.argv[:]):
+    app = MyApp()
+    app.MainLoop()
+    return 0
+
+if __name__ == '__main__':
+    sys.exit(main())
+
+# vim: set hls is ai et sw=4 sts=4 ts=8 nu:

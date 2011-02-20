@@ -17,6 +17,7 @@ alias lh='ls -lh'
 alias lla='ls -la'
 alias la='ls -A'
 alias l='ls -CF'
+alias lrt='ls -lrt'
 
 alias bc='bc -l'
 alias cpaf='cp --no-dereference -R --preserve=mode,link'

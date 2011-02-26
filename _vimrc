@@ -7,6 +7,7 @@ set t_Co=256
 colorscheme wombat256
 
 set nocompatible
+set clipboard=unnamed
 set autoindent
 set autoread
 set hlsearch

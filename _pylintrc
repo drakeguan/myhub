@@ -71,7 +71,10 @@ load-plugins=
 # W0613: *Unused argument %r*
 #  Used when a function or method argument is not used. This message belongs to the variables checker.
 #
-disable-msg=W0142,W0702,W0614,W0613
+# W0105: 
+#  String statement has no effect Used when a string is used as a statement (which of course has no effect). This is a particular case of W0104 with its own message so you can easily disable it if you're using those strings as documentation, instead of comments.
+#
+disable-msg=W0142,W0702,W0614,W0613,W0105
 
 
 [REPORTS]

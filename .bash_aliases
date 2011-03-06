@@ -60,6 +60,8 @@ if [ -z "${VIMVERSION}" ]; then
     alias gvim='gvim -p'
 fi
 
+function mkcd() { mkdir -p $@; cd $@; }
+
 # private alias
 if [ -f ~/.bash_aliases_private ]; then
     . ~/.bash_aliases_private
@@ -75,3 +77,4 @@ _pip_completion()
 complete -o default -F _pip_completion pip
 # pip bash completion end
 
+# vim: set ft=sh:

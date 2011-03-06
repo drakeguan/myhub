@@ -120,16 +120,6 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 
-
-
-########### dgchdir.py ##############################
-function sq() { cd `dgchdir.py --sq $1` ; }
-function sc() { cd `dgchdir.py --sc $1` ; }
-function dept() { cd `dgchdir.py --dept $1` ; }
-########################################################
-
-function mkcd() { mkdir -p $@; cd $@; }
-
 #export LD_LIBRARY_PATH=/opt/pixar/RenderMan_Studio-1.0.1-Maya8.5/bin/:/shows/dgTools/bin/64bit
 
 ping -c 2 proxy.digimax.com.tw &> /dev/null

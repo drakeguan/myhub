@@ -213,5 +213,7 @@ filetype indent on
 let g:tex_flavor='latex'
 
 " ropevim
-let $PYTHONPATH .= ":".$HOME."/.vim/ropevim/pylibs"
-source $HOME/.vim/ropevim/src/ropevim/ropevim.vim
+if has('python')
+    let $PYTHONPATH .= ":".$HOME."/.vim/ropevim/pylibs"
+    source $HOME/.vim/ropevim/src/ropevim/ropevim.vim
+endif

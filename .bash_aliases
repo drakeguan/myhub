@@ -40,6 +40,7 @@ alias xine='xine -l'
 #alias eric='PYTHONPATH=/usr/lib/python2.5/site-packages/:${PYTHONPATH} eric'
 if [ $OS = "Darwin" ]; then
     alias ps='ps aux'
+    alias top='top -o cpu'
 else
     alias ps='ps auxf'
 fi

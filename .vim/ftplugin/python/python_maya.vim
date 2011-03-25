@@ -1,3 +1,7 @@
+if !has("python")
+    finish
+endif
+
 " Only do this when not done yet for this buffer
 if exists("b:loaded_py_maya")
   finish

@@ -1,0 +1,20 @@
+[user]
+	name = Shuen Huei Guan
+	email = drake.guan@gmail.com
+[core]
+	autocrlf = input
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	df = diff
+	drop = checkout --
+	lg = log -p
+	st = status
+	show-tree = ls-tree
+	show-commit = show -s --pretty=raw
+	sync = !git pull && git push

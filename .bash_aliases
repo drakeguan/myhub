@@ -78,4 +78,24 @@ _pip_completion()
 complete -o default -F _pip_completion pip
 # pip bash completion end
 
+###########
+# git
+alias g='git status'
+alias ga='git add'
+alias gaa='git add .'
+alias gc='git commit -m'
+alias gca='git commit -am'
+alias gb='git branch'
+alias gbd='git branch -d'
+alias gco='git checkout'
+alias gcob='git checkout =b'
+alias gm='git merge'
+alias gr='git rebase'
+alias gl='git log'
+alias gs='git show'
+alias gd='git diff'
+alias gbl='git blame'
+alias gps='git push'
+alias gpl='git pull'
+
 # vim: set ft=sh:

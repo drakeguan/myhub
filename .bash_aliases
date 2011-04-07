@@ -98,5 +98,6 @@ alias gd='git diff'
 alias gbl='git blame'
 alias gps='git push'
 alias gpl='git pull'
+alias gt='git tag'
 
 # vim: set ft=sh:

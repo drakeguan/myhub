@@ -115,6 +115,8 @@ cnoremap <C-Tab> <C-C>:tabn<CR>
 noremap <C-F4> :tabc<CR>
 inoremap <C-F4> <C-O>:tabc<CR>
 cnoremap <C-F4> <C-C>:tabc<CR>
+" CTRL+d is close tab
+noremap <C-D> :tabc<CR>
 
 " CTRL+N is new tab
 noremap <C-N> :tabe<CR>
@@ -122,14 +124,11 @@ inoremap <C-N> <C-O>:tabe<CR>
 cnoremap <C-N> <C-C>:tabe<CR>
 
 " CTRL+[ is previous tab
-"map <C-[> :tabp<CR>
+map <C-[> :tabp<CR>
 
 " CTRL+} is next tab
-map <C-\> :tabn<CR>
-"map <C-]> :tabn<CR>
-
-" CTRL+d is close tab
-noremap <C-D> :tabc<CR>
+"map <C-\> :tabn<CR>
+map <C-]> :tabn<CR>
 
 " restore 'cpoptions'
 set cpo&

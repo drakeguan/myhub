@@ -3,11 +3,16 @@
 	email = drake.guan@gmail.com
 [core]
 	autocrlf = input
+	editor = vim
 [color]
 	diff = auto
 	status = auto
 	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
 [alias]
+	au = add -u
 	br = branch
 	ci = commit
 	co = checkout
@@ -18,3 +23,4 @@
 	show-tree = ls-tree
 	show-commit = show -s --pretty=raw
 	sync = !git pull && git push
+	w = whatchanged

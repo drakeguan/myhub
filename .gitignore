@@ -1,3 +1,6 @@
 *.swp
 *.pyc
 .vim/record/
+bin/git-flow*
+bin/gitflow*
+bin/dropbox.py

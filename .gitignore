@@ -4,3 +4,4 @@
 bin/git-flow*
 bin/gitflow*
 bin/dropbox.py
+.vim/.netrwhist

@@ -124,10 +124,10 @@ inoremap <C-N> <C-O>:tabe<CR>
 cnoremap <C-N> <C-C>:tabe<CR>
 
 " CTRL+[ is previous tab
-map <C-[> :tabp<CR>
+"map <C-[> :tabp<CR>
 
 " CTRL+} is next tab
-"map <C-\> :tabn<CR>
+map <C-\> :tabn<CR>
 map <C-]> :tabn<CR>
 
 " restore 'cpoptions'

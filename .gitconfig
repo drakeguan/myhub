@@ -18,6 +18,7 @@
 	co = checkout
 	df = diff
 	drop = checkout --
+	graph = log --graph --decorate --oneline --tags
 	lg = log -p
 	st = status
 	show-tree = ls-tree

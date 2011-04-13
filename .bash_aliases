@@ -97,9 +97,14 @@ alias gr='git rebase'
 alias gl='git log'
 alias gs='git show'
 alias gd='git diff'
+alias gdc='git diff --cached'
 alias gbl='git blame'
 alias gps='git push'
 alias gpl='git pull'
 alias gt='git tag'
+
+# gpg
+alias gpgget='gpg --keyserver keyserver.ubuntu.com --recv-keys'
+alias gpgput='gpg --epoxrt --armor'
 
 # vim: set ft=sh:

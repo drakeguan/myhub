@@ -45,6 +45,7 @@ else
     alias ps='ps auxf'
 fi
 alias du1='du -h --max-depth=1'
+alias dush='du -sh'
 
 # svn 
 alias svnmeld='svn diff --diff-cmd "/usr/bin/meld"'

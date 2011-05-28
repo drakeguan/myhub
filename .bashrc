@@ -9,20 +9,11 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# MacPorts Installer addition on 2008-12-24_at_23:35:44: adding an appropriate PATH variable for use with MacPorts.
-if [ -d /opt/local/bin ]; then
-    export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-fi
-# Finished adapting your PATH environment variable for use with MacPorts.
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
 if [ -d ${HOME}/bin ]; then
     export PATH="${HOME}/bin/:${PATH}"
 fi
-
-# MacPorts Installer addition on 2008-12-24_at_23:35:44: adding an appropriate MANPATH variable for use with MacPorts.
-if [ -d /opt/local/share/man ]; then
-    export MANPATH=/opt/local/share/man:$MANPATH
-fi
-# Finished adapting your MANPATH environment variable for use with MacPorts.
 
 export LANG=en_US.UTF-8
 
@@ -93,8 +84,8 @@ fi
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
-if [ -f /opt/local/etc/bash_completion ]; then
-    . /opt/local/etc/bash_completion
+if [ -f /usr/local/etc/bash_completion ]; then
+    . /usr/local/etc/bash_completion
 fi
 
 ################### For RenderMan #########################

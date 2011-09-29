@@ -128,15 +128,21 @@ alias gb='git branch'
 make-completion-wrapper _git _git_gb git branch
 complete -o bashdefault -o default -o nospace -F _git_gb gb
 alias gbd='git branch -d'
+make-completion-wrapper _git _git_gbd git branch -d
+complete -o bashdefault -o default -o nospace -F _git_gbd gbd
 alias gco='git checkout'
 make-completion-wrapper _git _git_gco git checkout
 complete -o bashdefault -o default -o nospace -F _git_gco gco
 alias gcob='git checkout -b'
-alias gdrb='git push origin'
+alias gcot='git checkout -t'
+alias gcotb='git checkout --track -b'
 alias gg='git log --graph --decorate --oneline --tags'
 alias gm='git merge'
 alias gr='git rebase'
 alias gl='git log'
+make-completion-wrapper _git _git_gl git log
+complete -o bashdefault -o default -o nospace -F _git_gl gl
+alias glp='git log --pretty=format:"%h %s" --graph'
 alias gs='git show'
 alias gd='git diff'
 alias gdc='git diff --cached'

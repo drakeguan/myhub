@@ -126,3 +126,8 @@ fi
 if [ -d ${HOME}/perl5/lib/perl5 ]; then
     export PERL5LIB=${HOME}/perl5/lib/perl5:$PERL5LIB
 fi
+
+# gem installation path for homebrew
+if [ -d /usr/local/gems ]; then
+    export GEM_HOME=/usr/local
+fi

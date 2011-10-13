@@ -127,6 +127,8 @@ alias gca='git commit -am'
 alias gb='git branch'
 make-completion-wrapper _git _git_gb git branch
 complete -o bashdefault -o default -o nospace -F _git_gb gb
+alias gba='git branch -a'
+alias gbr='git branch -r'
 alias gbd='git branch -d'
 make-completion-wrapper _git _git_gbd git branch -d
 complete -o bashdefault -o default -o nospace -F _git_gbd gbd
@@ -146,6 +148,7 @@ alias glp='git log --pretty=format:"%h %s" --graph'
 alias gs='git show'
 alias gd='git diff'
 alias gdc='git diff --cached'
+alias gdm='git difftool -t meld'
 alias gbl='git blame'
 alias gps='git push'
 alias gpl='git pull'

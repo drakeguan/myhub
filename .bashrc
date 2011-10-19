@@ -21,7 +21,6 @@ export LANG=en_US.UTF-8
 export HISTCONTROL=ignoredups
 export HISTFILESIZE=3000 # the bash history should save 3000 commands
 
-shopt -s checkwinsize
 # Enable options:
 shopt -s cdspell
 shopt -s cdable_vars
@@ -67,12 +66,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-# git on drakeguan.org
-if [ -d ~/git/bin ]; then
-    export GIT_HOME=${HOME}/git
-    export PATH=${GIT_HOME}/bin:${GIT_HOME}/lib/libexec/git-core/:${PATH}
-fi
-
 # Define your own aliases here ...
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -107,14 +100,24 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 
-#export LD_LIBRARY_PATH=/opt/pixar/RenderMan_Studio-1.0.1-Maya8.5/bin/:/shows/dgTools/bin/64bit
 
+
+
+#################################################
+
+# proxy
 ping -c 2 proxy.digimax.com.tw &> /dev/null
 if [ $? = 0 ]
 then
     export http_proxy='http://proxy.digimax.com.tw:8080'
     export https_proxy='http://proxy.digimax.com.tw:8080'
     export ftp_proxy='http://proxy.digimax.com.tw:8080'
+fi
+
+# git on drakeguan.org
+if [ -d ~/git/bin ]; then
+    export GIT_HOME=${HOME}/git
+    export PATH=${GIT_HOME}/bin:${GIT_HOME}/lib/libexec/git-core/:${PATH}
 fi
 
 # local python path if available

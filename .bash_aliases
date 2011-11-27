@@ -138,8 +138,13 @@ complete -o bashdefault -o default -o nospace -F _git_gco gco
 alias gcob='git checkout -b'
 alias gcot='git checkout -t'
 alias gcotb='git checkout --track -b'
+alias gds='git diff --stat'
+alias gdsd='git diff --stat `gmbd`'
 alias gg='git log --graph --decorate --oneline --tags'
 alias gm='git merge'
+alias gmb='git merge-base'
+alias gmbd='git merge-base `gn` develop'
+alias gn='git name-rev --name-only HEAD'
 alias gr='git rebase'
 alias gl='git log'
 make-completion-wrapper _git _git_gl git log

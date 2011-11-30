@@ -55,6 +55,7 @@ alias lrt='ls -lrt'
 alias bc='bc -l'
 alias cpaf='cp --no-dereference -R --preserve=mode,link'
 #alias ssh='ssh -X'
+alias grant='eval `ssh-agent -s` && ssh-add'
 
 # grep
 #MACHINE=`uname -m`

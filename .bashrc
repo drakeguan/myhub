@@ -120,9 +120,18 @@ if [ -d ~/git/bin ]; then
     export PATH=${GIT_HOME}/bin:${GIT_HOME}/lib/libexec/git-core/:${PATH}
 fi
 
-# local python path if available
+# Mac OS X specific stuff
 if [ `uname` = 'Darwin' ]; then
+    # local python path if available
     export PYTHONPATH=/usr/local/lib/python:/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+    # work-around for XCode
+    export ARCHFLAGS="-arch i386 -arch x86_64"
+
+    ## gem installation path for homebrew
+    #if [ -d /usr/local/gems ]; then
+        #export GEM_HOME=/usr/local
+    #fi
 fi
 
 # local perl5 modules
@@ -130,7 +139,3 @@ if [ -d ${HOME}/perl5/lib/perl5 ]; then
     export PERL5LIB=${HOME}/perl5/lib/perl5:$PERL5LIB
 fi
 
-# gem installation path for homebrew
-if [ -d /usr/local/gems ]; then
-    export GEM_HOME=/usr/local
-fi

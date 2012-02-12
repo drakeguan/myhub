@@ -121,8 +121,8 @@ if [ -d ~/git/bin ]; then
 fi
 
 # local python path if available
-if [ -d ${HOME}/Documents/Code/python/lib ]; then
-    export PYTHONPATH=${HOME}/Documents/Code/python/lib:${PYTHONPATH}
+if [ `uname` = 'Darwin' ]; then
+    export PYTHONPATH=/usr/local/lib/python:/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 fi
 
 # local perl5 modules

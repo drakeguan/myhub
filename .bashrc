@@ -12,7 +12,7 @@ export LANG=en_US.UTF-8
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 if [ -d ${HOME}/bin ]; then
-    export PATH="${HOME}/bin/:${PATH}"
+    export PATH="${HOME}/bin:${PATH}"
 fi
 
 export LANG=en_US.UTF-8
@@ -132,6 +132,9 @@ if [ `uname` = 'Darwin' ]; then
     #if [ -d /usr/local/gems ]; then
         #export GEM_HOME=/usr/local
     #fi
+
+    # node path for node.js
+    export NODE_PATH=/usr/local/lib/node_modules
 fi
 
 # local perl5 modules

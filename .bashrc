@@ -134,3 +134,6 @@ fi
 if [ -d /usr/local/gems ]; then
     export GEM_HOME=/usr/local
 fi
+
+# local rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

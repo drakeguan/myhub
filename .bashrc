@@ -12,7 +12,7 @@ export LANG=en_US.UTF-8
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 if [ -d ${HOME}/bin ]; then
-    export PATH="${HOME}/bin/:${PATH}"
+    export PATH="${HOME}/bin:${PATH}"
 fi
 
 export LANG=en_US.UTF-8
@@ -61,6 +61,7 @@ esac
 case "$TERM" in
 xterm*|rxvt*)
     PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+    export TERM=xterm-256color
     ;;
 *)
     ;;
@@ -120,9 +121,21 @@ if [ -d ~/git/bin ]; then
     export PATH=${GIT_HOME}/bin:${GIT_HOME}/lib/libexec/git-core/:${PATH}
 fi
 
-# local python path if available
-if [ -d ${HOME}/Documents/Code/python/lib ]; then
-    export PYTHONPATH=${HOME}/Documents/Code/python/lib:${PYTHONPATH}
+# Mac OS X specific stuff
+if [ `uname` = 'Darwin' ]; then
+    # local python path if available
+    export PYTHONPATH=/usr/local/lib/python:/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+    # work-around for XCode
+    export ARCHFLAGS="-arch i386 -arch x86_64"
+
+    ## gem installation path for homebrew
+    #if [ -d /usr/local/gems ]; then
+        #export GEM_HOME=/usr/local
+    #fi
+
+    # node path for node.js
+    export NODE_PATH=/usr/local/lib/node_modules
 fi
 
 # local perl5 modules

@@ -61,6 +61,7 @@ esac
 case "$TERM" in
 xterm*|rxvt*)
     PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+    export TERM=xterm-256color
     ;;
 *)
     ;;
@@ -141,4 +142,5 @@ fi
 if [ -d ${HOME}/perl5/lib/perl5 ]; then
     export PERL5LIB=${HOME}/perl5/lib/perl5:$PERL5LIB
 fi
+
 

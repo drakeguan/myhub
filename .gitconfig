@@ -24,5 +24,12 @@
 	st = status
 	show-tree = ls-tree
 	show-commit = show -s --pretty=raw
-	sync = !git pull && git push
+	sync = !legit sync \"$@\"
 	w = whatchanged
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"

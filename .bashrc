@@ -124,7 +124,7 @@ fi
 # Mac OS X specific stuff
 if [ `uname` = 'Darwin' ]; then
     # local python path if available
-    export PYTHONPATH=/usr/local/lib/python:/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+    export PYTHONPATH=/usr/local/lib/python2.6/site-packages:$PYTHONPATH
 
     # work-around for XCode
     export ARCHFLAGS="-arch i386 -arch x86_64"

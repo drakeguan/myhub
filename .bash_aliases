@@ -152,6 +152,7 @@ make-completion-wrapper _git _git_gl git log
 complete -o bashdefault -o default -o nospace -F _git_gl gl
 alias glp='git log --pretty=format:"%h %s" --graph'
 alias glg='git log --graph'
+alias glg2="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gs='git show'
 alias gd='git diff'
 alias gdc='git diff --cached'

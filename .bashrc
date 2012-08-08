@@ -44,6 +44,21 @@ if [ -z "$debian_chroot" -a -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+# Define your own aliases here ...
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+if [ -f /usr/local/etc/bash_completion ]; then
+    . /usr/local/etc/bash_completion
+fi
+
 # set a fancy prompt
 if type __git_ps1 >/dev/null 2>&1; then
 case "$TERM" in
@@ -80,21 +95,6 @@ xterm*|rxvt*)
 *)
     ;;
 esac
-
-# Define your own aliases here ...
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-fi
-if [ -f /usr/local/etc/bash_completion ]; then
-    . /usr/local/etc/bash_completion
-fi
 
 ################### For RenderMan #########################
 

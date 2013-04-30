@@ -2,20 +2,23 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
+
 
 # locale encoding
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+
+# path
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 if [ -d ${HOME}/bin ]; then
     export PATH="${HOME}/bin:${PATH}"
 fi
 
-export LANG=en_US.UTF-8
 
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
@@ -152,15 +155,3 @@ if [ `uname` = 'Darwin' ]; then
     export NODE_PATH=/usr/local/lib/node_modules
 fi
 
-# local perl5 modules
-if [ -d ${HOME}/perl5/lib/perl5 ]; then
-    export PERL5LIB=${HOME}/perl5/lib/perl5:$PERL5LIB
-fi
-
-# gem installation path for homebrew
-if [ -d /usr/local/gems ]; then
-    export GEM_HOME=/usr/local
-fi
-
-# local rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

@@ -34,3 +34,5 @@
 	harvest = !legit harvest \"$@\"
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
+[push]
+	default = upstream

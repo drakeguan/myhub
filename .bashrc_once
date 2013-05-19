@@ -141,7 +141,7 @@ fi
 # Mac OS X specific stuff
 if [ `uname` = 'Darwin' ]; then
     # local python path if available
-    export PYTHONPATH=/usr/local/lib/python2.6/site-packages:$PYTHONPATH
+    export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
     # work-around for XCode
     export ARCHFLAGS="-arch i386 -arch x86_64"
@@ -154,4 +154,7 @@ if [ `uname` = 'Darwin' ]; then
     # node path for node.js
     export NODE_PATH=/usr/local/lib/node_modules
 fi
+
+# rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 

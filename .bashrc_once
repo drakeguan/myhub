@@ -12,9 +12,10 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 
+##########################
 # path
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
+# personal bin path
 if [ -d ${HOME}/bin ]; then
     export PATH="${HOME}/bin:${PATH}"
 fi

@@ -14,7 +14,8 @@ export LANG=en_US.UTF-8
 
 ##########################
 # path
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
+
 # personal bin path
 if [ -d ${HOME}/bin ]; then
     export PATH="${HOME}/bin:${PATH}"
@@ -147,15 +148,17 @@ if [ `uname` = 'Darwin' ]; then
     # work-around for XCode
     export ARCHFLAGS="-arch i386 -arch x86_64"
 
-    ## gem installation path for homebrew
-    #if [ -d /usr/local/gems ]; then
-        #export GEM_HOME=/usr/local
-    #fi
-
     # node path for node.js
     export NODE_PATH=/usr/local/lib/node_modules
 fi
 
+# pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# travis gem
+if [ -d ~/.travis ]; then
+    source ~/.travis/travis.sh
+fi

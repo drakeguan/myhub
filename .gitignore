@@ -6,3 +6,5 @@ bin/gitflow*
 bin/dropbox.py
 .vim/.netrwhist
 tags
+*~
+.DS_Store

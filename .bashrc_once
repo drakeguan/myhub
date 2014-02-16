@@ -134,12 +134,6 @@ then
     export ftp_proxy='http://proxy.digimax.com.tw:8080'
 fi
 
-# git on drakeguan.org
-if [ -d ~/git/bin ]; then
-    export GIT_HOME=${HOME}/git
-    export PATH=${GIT_HOME}/bin:${GIT_HOME}/lib/libexec/git-core/:${PATH}
-fi
-
 # Mac OS X specific stuff
 if [ `uname` = 'Darwin' ]; then
     # work-around for XCode

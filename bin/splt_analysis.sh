@@ -1,1 +1,0 @@
-grep "^\s*function" `find . -name "*.splt" -print` | awk '{print $5}' | perl -e 'while(<>){s/^\s+//;s/\s+$//; $num{$_}++; $total_num++;} foreach $key (keys(%num)) {print "we have $num{$key} $key\n"} print "total num: $total_num\n"'

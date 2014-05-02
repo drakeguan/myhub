@@ -144,3 +144,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if [ -d ~/.travis ]; then
     source ~/.travis/travis.sh
 fi
+
+# go
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin

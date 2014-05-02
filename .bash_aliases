@@ -1,3 +1,4 @@
+# vim: set ft=sh:
 
 # Author.: Ole J
 # Date...: 23.03.2008
@@ -166,4 +167,5 @@ alias gt='git tag'
 alias gpgget='gpg --keyserver keyserver.ubuntu.com --recv-keys'
 alias gpgput='gpg --epoxrt --armor'
 
-# vim: set ft=sh:
+# wget
+alias wget-mirror='wget --mirror --page-requisites --adjust-extension --no-parent -c --convert-links'

@@ -157,4 +157,4 @@ alias gpgget='gpg --keyserver keyserver.ubuntu.com --recv-keys'
 alias gpgput='gpg --epoxrt --armor'
 
 # wget
-alias wget-mirror='wget --mirror --page-requisites --adjust-extension --no-parent -c --convert-links'
+alias wget-mirror='wget --mirror --page-requisites --no-parent -c'

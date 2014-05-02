@@ -31,18 +31,14 @@ function $function_name {
 }
 
 
-
-OS=$(uname)
-## some more ls aliases
-if [ "$TERM" != "dumb" ]; then
-    if [ $OS = "Darwin" ]; then
+if shell_is_osx; then
 	alias ls='ls -G'
-    else
+	alias ps='ps aux'
+	alias top='top -o cpu'
+else
 	eval "`dircolors -b`"
 	alias ls='ls --color=auto'
-    fi
-    alias dir='ls --format=vertical'
-    alias vdir='ls --format=long'
+	alias ps='ps auxf'
 fi
 
 alias ll='ls -l'
@@ -72,13 +68,6 @@ if [ -f /etc/issue ]; then
 fi
 
 alias xine='xine -l'
-#alias eric='PYTHONPATH=/usr/lib/python2.5/site-packages/:${PYTHONPATH} eric'
-if [ $OS = "Darwin" ]; then
-    alias ps='ps aux'
-    alias top='top -o cpu'
-else
-    alias ps='ps auxf'
-fi
 alias du1='du -h --max-depth=1'
 alias dush='du -sh'
 

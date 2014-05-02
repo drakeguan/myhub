@@ -125,8 +125,8 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 #################################################
 
-# Mac OS X specific stuff
-if [ `uname` = 'Darwin' ]; then
+# # Mac OS X specific stuff
+if shell_is_osx; then
     # work-around for XCode
     export ARCHFLAGS="-arch i386 -arch x86_64"
 

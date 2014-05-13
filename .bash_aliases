@@ -35,6 +35,7 @@ if shell_is_osx; then
 	alias ls='ls -G'
 	alias ps='ps aux'
 	alias top='top -o cpu'
+	alias ldd='otool -L'
 else
 	eval "`dircolors -b`"
 	alias ls='ls --color=auto'

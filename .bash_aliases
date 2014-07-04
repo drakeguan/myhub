@@ -159,3 +159,7 @@ alias gpgput='gpg --epoxrt --armor'
 
 # wget
 alias wget-mirror='wget --mirror --page-requisites --no-parent -c'
+
+
+# AWS CLI
+#complete -C aws_completer aws

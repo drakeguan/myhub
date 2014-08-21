@@ -162,4 +162,6 @@ alias wget-mirror='wget --mirror --page-requisites --no-parent -c'
 
 
 # AWS CLI
-#complete -C aws_completer aws
+if [ -f /usr/local/bin/aws_completer ]; then
+    complete -C aws_completer aws
+fi

@@ -160,6 +160,8 @@ alias gpgput='gpg --epoxrt --armor'
 # wget
 alias wget-mirror='wget --mirror --page-requisites --no-parent -c'
 
+# AV related
+alias dgffprobe='ffprobe -v quiet -show_format -show_streams -print_format json -i'
 
 # AWS CLI
 if [ -f /usr/local/bin/aws_completer ]; then

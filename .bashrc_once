@@ -151,6 +151,9 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# plenv
+if which plenv > /dev/null; then eval "$(plenv init -)"; fi
+
 # travis gem
 if [ -d ~/.travis ]; then
     source ~/.travis/travis.sh

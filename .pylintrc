@@ -74,7 +74,13 @@ load-plugins=
 # W0105: 
 #  String statement has no effect Used when a string is used as a statement (which of course has no effect). This is a particular case of W0104 with its own message so you can easily disable it if you're using those strings as documentation, instead of comments.
 #
-disable-msg=W0142,W0702,W0614,W0613,W0105,C0103
+# :invalid-name (C0103): *Invalid %s name "%s"%s*
+#   Used when the name doesn't match the regular expression associated to its type
+#     (constant, variable, class...).
+#
+# :bad-continuation (C0330): *Wrong %s indentation%s.*
+#
+disable-msg=W0142,W0702,W0614,W0613,W0105,C0103,C0330
 
 
 [REPORTS]
@@ -82,9 +88,6 @@ disable-msg=W0142,W0702,W0614,W0613,W0105,C0103
 # set the output format. Available formats are text, parseable, colorized, msvs
 # (visual studio) and html
 output-format=parseable
-
-# Include message's id in output
-include-ids=yes
 
 # Put messages in a separate file for each module / package specified on the
 # command line instead of printing them on stdout. Reports (if any) will be

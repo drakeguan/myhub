@@ -49,7 +49,28 @@ alias lla='ls -la'
 alias la='ls -A'
 alias l='ls -CF'
 alias lrt='ls -lrt'
+alias l.='ls -d .*'
 
+## get rid of command not found ##
+alias cd..='cd ..'
+ 
+## a quick way to get out of current directory ##
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+
+# handy short cuts #
+alias h='history'
+alias j='jobs -l'
+
+alias path='echo -e ${PATH//:/\\n}'
+alias now='date +"%T"'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
+ 
 alias bc='bc -l'
 alias cpaf='cp --no-dereference -R --preserve=mode,link'
 #alias ssh='ssh -X'
@@ -147,7 +168,8 @@ alias glg2="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 alias gs='git show'
 alias gd='git diff'
 alias gdc='git diff --cached'
-alias gdm='git difftool -t meld'
+alias gdm='git difftool -y -t meld'
+alias gdd='git difftool -y --extcmd="cdiff -s -w 0"'
 alias gbl='git blame'
 alias gps='git push'
 alias gpl='git pull'
@@ -167,3 +189,8 @@ alias dgffprobe='ffprobe -v quiet -show_format -show_streams -print_format json 
 if [ -f /usr/local/bin/aws_completer ]; then
     complete -C aws_completer aws
 fi
+
+# Pylint
+function pll () {
+	pylint $1 | less
+}

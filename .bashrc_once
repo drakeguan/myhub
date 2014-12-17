@@ -148,3 +148,9 @@ fi
 # go
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
+
+# private stuff
+if [ -f ~/.bash_private ]; then
+    . ~/.bash_private
+fi
+

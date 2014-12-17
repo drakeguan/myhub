@@ -1,3 +1,9 @@
+This is my personal dot files for my working environment and my MacBook Pro.
+
+http://drakeguan.org/
+Shuen-Huei (Drake) Guan.
+
+
 bashrc\_dispatch
 =================
 

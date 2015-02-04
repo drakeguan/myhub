@@ -1,6 +1,8 @@
-if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
-	GIT_PROMPT_THEME=Solarized
-	source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+if type "brew" 2>&1 > /dev/null; then
+    if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
+        GIT_PROMPT_THEME=Solarized
+        source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+    fi
 fi
 
 

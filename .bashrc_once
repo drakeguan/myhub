@@ -139,6 +139,10 @@ fi
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 
+# java
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+
 # private stuff
 if [ -f ~/.bash_private ]; then
     . ~/.bash_private

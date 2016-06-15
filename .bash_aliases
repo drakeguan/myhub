@@ -174,6 +174,11 @@ alias gbl='git blame'
 alias gps='git push'
 alias gpl='git pull'
 alias gt='git tag'
+alias gffs='git flow feature start'
+alias gfff='git flow feature finish'
+alias gffr='git flow feature finish -r'
+alias gfrs='git flow release start'
+alias gfrf='git flow release finish'
 
 # gpg
 alias gpgget='gpg --keyserver keyserver.ubuntu.com --recv-keys'

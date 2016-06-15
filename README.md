@@ -1,7 +1,8 @@
 This is my personal dot files for my working environment and my MacBook Pro.
 
-http://drakeguan.org/
-Shuen-Huei (Drake) Guan.
+`./bootstrap.sh`, this is what you all need to do then.
+
+[Shuen-Huei (Drake) Guan](http://drakeguan.org/)
 
 
 bashrc\_dispatch

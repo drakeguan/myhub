@@ -1,10 +1,5 @@
 # vim: set sw=4 sts=4 ts=4 et:
 
-# bash completion
-if [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-fi
-
 # Check if we are under OS X with homebrew
 if type "brew" 2>&1 > /dev/null; then
 

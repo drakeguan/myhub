@@ -200,3 +200,8 @@ fi
 function pll () {
 	pylint $1 | less
 }
+
+# jq with color and pagination
+function jqless () {
+	jq -C $@ | less -r
+}

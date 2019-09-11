@@ -205,3 +205,8 @@ function pll () {
 function jqless () {
 	jq -C $@ | less -r
 }
+
+
+# Mac OS X
+alias ssidlist="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s"
+alias ssidlist-s="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s | sed 's/^[ \t]*//' | cut -d ' ' -f 1 | sort | uniq"
